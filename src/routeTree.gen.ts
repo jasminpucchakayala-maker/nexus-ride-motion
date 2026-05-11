@@ -9,61 +9,154 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as LayoutRouteImport } from './routes/_layout'
+import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
+import { Route as LayoutVehiclesRouteImport } from './routes/_layout/vehicles'
+import { Route as LayoutLoginRouteImport } from './routes/_layout/login'
+import { Route as LayoutDashboardRouteImport } from './routes/_layout/dashboard'
+import { Route as LayoutBookingRouteImport } from './routes/_layout/booking'
 
-const IndexRoute = IndexRouteImport.update({
+const LayoutRoute = LayoutRouteImport.update({
+  id: '/_layout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LayoutIndexRoute = LayoutIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutVehiclesRoute = LayoutVehiclesRouteImport.update({
+  id: '/vehicles',
+  path: '/vehicles',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutLoginRoute = LayoutLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutDashboardRoute = LayoutDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutBookingRoute = LayoutBookingRouteImport.update({
+  id: '/booking',
+  path: '/booking',
+  getParentRoute: () => LayoutRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/': typeof LayoutIndexRoute
+  '/booking': typeof LayoutBookingRoute
+  '/dashboard': typeof LayoutDashboardRoute
+  '/login': typeof LayoutLoginRoute
+  '/vehicles': typeof LayoutVehiclesRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/booking': typeof LayoutBookingRoute
+  '/dashboard': typeof LayoutDashboardRoute
+  '/login': typeof LayoutLoginRoute
+  '/vehicles': typeof LayoutVehiclesRoute
+  '/': typeof LayoutIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+  '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/booking': typeof LayoutBookingRoute
+  '/_layout/dashboard': typeof LayoutDashboardRoute
+  '/_layout/login': typeof LayoutLoginRoute
+  '/_layout/vehicles': typeof LayoutVehiclesRoute
+  '/_layout/': typeof LayoutIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/booking' | '/dashboard' | '/login' | '/vehicles'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/booking' | '/dashboard' | '/login' | '/vehicles' | '/'
+  id:
+    | '__root__'
+    | '/_layout'
+    | '/_layout/booking'
+    | '/_layout/dashboard'
+    | '/_layout/login'
+    | '/_layout/vehicles'
+    | '/_layout/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  LayoutRoute: typeof LayoutRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/_layout': {
+      id: '/_layout'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof LayoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_layout/': {
+      id: '/_layout/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof LayoutIndexRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/vehicles': {
+      id: '/_layout/vehicles'
+      path: '/vehicles'
+      fullPath: '/vehicles'
+      preLoaderRoute: typeof LayoutVehiclesRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/login': {
+      id: '/_layout/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LayoutLoginRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/dashboard': {
+      id: '/_layout/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof LayoutDashboardRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/booking': {
+      id: '/_layout/booking'
+      path: '/booking'
+      fullPath: '/booking'
+      preLoaderRoute: typeof LayoutBookingRouteImport
+      parentRoute: typeof LayoutRoute
     }
   }
 }
 
+interface LayoutRouteChildren {
+  LayoutBookingRoute: typeof LayoutBookingRoute
+  LayoutDashboardRoute: typeof LayoutDashboardRoute
+  LayoutLoginRoute: typeof LayoutLoginRoute
+  LayoutVehiclesRoute: typeof LayoutVehiclesRoute
+  LayoutIndexRoute: typeof LayoutIndexRoute
+}
+
+const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutBookingRoute: LayoutBookingRoute,
+  LayoutDashboardRoute: LayoutDashboardRoute,
+  LayoutLoginRoute: LayoutLoginRoute,
+  LayoutVehiclesRoute: LayoutVehiclesRoute,
+  LayoutIndexRoute: LayoutIndexRoute,
+}
+
+const LayoutRouteWithChildren =
+  LayoutRoute._addFileChildren(LayoutRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  LayoutRoute: LayoutRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
