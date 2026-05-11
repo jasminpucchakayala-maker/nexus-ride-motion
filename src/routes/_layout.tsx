@@ -1,0 +1,19 @@
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+export const Route = createFileRoute("/_layout")({
+  component: LayoutComponent,
+});
+
+function LayoutComponent() {
+  return (
+    <div className="relative min-h-screen">
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+}
