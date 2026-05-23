@@ -3,10 +3,10 @@ import { useState } from "react";
 import Car3D from "./Car3D";
 
 const vehicles = [
-  { id: "tesla", name: "Model X Roadster", category: "Luxury EV", price: 89, range: "520 km", speed: "0-100 / 2.1s", color: "#7aa8ff" },
-  { id: "bike", name: "Neon Sport Bike", category: "Bike", price: 24, range: "180 km", speed: "0-100 / 3.4s", color: "#c77dff" },
-  { id: "scoot", name: "Volt EV Scooter", category: "EV Scooter", price: 12, range: "90 km", speed: "Top 65 km/h", color: "#5ce1e6" },
-  { id: "lambo", name: "Aero GT", category: "Luxury", price: 199, range: "480 km", speed: "0-100 / 1.9s", color: "#ff7a59" },
+  { id: "tata", name: "Tata Nexon EV Max", category: "Electric SUV", price: 249, range: "453 km", speed: "0-100 / 8.9s", color: "#7aa8ff" },
+  { id: "bike", name: "Royal Enfield Classic 350", category: "Cruiser Bike", price: 89, range: "350 km", speed: "0-60 / 5.2s", color: "#c77dff" },
+  { id: "scoot", name: "Ather 450X EV Scooter", category: "EV Scooter", price: 49, range: "146 km", speed: "Top 90 km/h", color: "#5ce1e6" },
+  { id: "lambo", name: "Mahindra Thar Roxx", category: "Luxury SUV", price: 599, range: "520 km", speed: "0-100 / 9.0s", color: "#ff7a59" },
 ];
 
 const swatches = ["#7aa8ff", "#c77dff", "#5ce1e6", "#ff7a59", "#a3ff8c", "#ffffff"];
