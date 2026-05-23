@@ -59,7 +59,7 @@ function BookingPage() {
                 <motion.div key="s2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                   <h3 className="text-xl font-bold">Choose vehicle</h3>
                   <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                    {["Tesla Model 3", "BMW i8", "Royal Enfield 650", "Volt EV Scooter"].map((n, i) => (
+                    {["Tata Nexon EV Max", "Mahindra Thar Roxx", "Royal Enfield Classic 350", "Ather 450X EV Scooter"].map((n, i) => (
                       <label key={n} className="glass flex cursor-pointer items-center justify-between rounded-2xl p-4 hover:bg-white/10">
                         <div>
                           <div className="font-semibold">{n}</div>
