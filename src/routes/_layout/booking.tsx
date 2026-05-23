@@ -91,7 +91,7 @@ function BookingPage() {
                       </>
                     )}
                     {pay === "wallet" && (
-                      <div className="glass rounded-xl p-4 text-sm">Voltride Wallet · Balance <b className="text-gradient">$240.50</b></div>
+                      <div className="glass rounded-xl p-4 text-sm">Voltride Wallet · Balance <b className="text-gradient">₹12,480</b></div>
                     )}
                   </div>
                 </motion.div>
