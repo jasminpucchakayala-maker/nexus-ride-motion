@@ -42,7 +42,7 @@ export default function AIRecommendation() {
               <p className="mt-1 text-xs text-muted-foreground">{r.tag}</p>
               <p className="mt-4 text-sm">{r.reason}</p>
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-lg font-bold text-gradient">${r.price}/day</span>
+                <span className="text-lg font-bold text-gradient">₹{r.price}/day</span>
                 <button className="btn-ghost !py-2 text-xs">Book <FaArrowRight /></button>
               </div>
             </motion.div>
