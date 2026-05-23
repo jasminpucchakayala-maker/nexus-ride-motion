@@ -48,8 +48,8 @@ function BookingPage() {
                 <motion.div key="s1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                   <h3 className="text-xl font-bold">Trip details</h3>
                   <div className="mt-5 grid gap-4 md:grid-cols-2">
-                    <Field icon={<FaMapPin />} label="Pickup"><input className="input" placeholder="123 Main St" /></Field>
-                    <Field icon={<FaMapPin />} label="Drop-off"><input className="input" placeholder="Airport T2" /></Field>
+                    <Field icon={<FaMapPin />} label="Pickup"><input className="input" placeholder="Bandra West, Mumbai" /></Field>
+                    <Field icon={<FaMapPin />} label="Drop-off"><input className="input" placeholder="CSMI Airport T2" /></Field>
                     <Field icon={<FaCalendarAlt />} label="Pickup time"><input type="datetime-local" className="input" /></Field>
                     <Field icon={<FaCalendarAlt />} label="Return"><input type="datetime-local" className="input" /></Field>
                   </div>
@@ -59,7 +59,7 @@ function BookingPage() {
                 <motion.div key="s2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                   <h3 className="text-xl font-bold">Choose vehicle</h3>
                   <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                    {["Tesla Model 3", "BMW i8", "Royal Enfield 650", "Volt EV Scooter"].map((n, i) => (
+                    {["Tata Nexon EV Max", "Mahindra Thar Roxx", "Royal Enfield Classic 350", "Ather 450X EV Scooter"].map((n, i) => (
                       <label key={n} className="glass flex cursor-pointer items-center justify-between rounded-2xl p-4 hover:bg-white/10">
                         <div>
                           <div className="font-semibold">{n}</div>
@@ -91,7 +91,7 @@ function BookingPage() {
                       </>
                     )}
                     {pay === "wallet" && (
-                      <div className="glass rounded-xl p-4 text-sm">Voltride Wallet · Balance <b className="text-gradient">$240.50</b></div>
+                      <div className="glass rounded-xl p-4 text-sm">Voltride Wallet · Balance <b className="text-gradient">₹12,480</b></div>
                     )}
                   </div>
                 </motion.div>
@@ -111,14 +111,14 @@ function BookingPage() {
           {/* Summary */}
           <aside className="neon-border glass rounded-3xl p-6 h-fit sticky top-28">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Booking Summary</div>
-            <div className="mt-3 text-lg font-semibold">Tesla Model 3</div>
+            <div className="mt-3 text-lg font-semibold">Tata Nexon EV Max</div>
             <div className="mt-1 flex items-center gap-1 text-xs text-[color:var(--neon)]"><FaCheckCircle /> Live availability</div>
             <div className="mt-5 space-y-2 text-sm">
-              <Row label="Base fare" value="$49.00" />
-              <Row label="Insurance" value="$5.50" />
-              <Row label="Taxes" value="$4.20" />
+              <Row label="Base fare" value="₹1,999" />
+              <Row label="Insurance" value="₹249" />
+              <Row label="GST (18%)" value="₹405" />
               <div className="my-3 border-t border-white/10" />
-              <Row label={<b>Total</b>} value={<b className="text-gradient text-lg">$58.70</b>} />
+              <Row label={<b>Total</b>} value={<b className="text-gradient text-lg">₹2,653</b>} />
             </div>
           </aside>
         </div>
@@ -141,7 +141,7 @@ function BookingPage() {
               </div>
               <h3 className="mt-5 text-2xl font-bold">Booking confirmed!</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Your Tesla Model 3 is reserved. Driver details sent to your phone.
+                Your Tata Nexon EV Max is reserved. Driver details sent to your phone.
               </p>
               <button className="btn-neon mt-6 w-full justify-center" onClick={() => setConfirmed(false)}>Done</button>
             </motion.div>

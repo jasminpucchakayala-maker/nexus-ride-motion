@@ -25,20 +25,20 @@ export default function SearchFilter() {
           <div className="grid gap-3 md:grid-cols-[2fr_1fr_1fr_auto]">
             <div className="glass flex items-center gap-3 rounded-xl px-4 py-3">
               <FaMapPin className="text-[color:var(--neon)]" />
-              <input className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground" placeholder="Pickup location" />
+              <input className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground" placeholder="Pickup location — Mumbai, Delhi, Bengaluru…" />
             </div>
             <select className="glass appearance-none rounded-xl px-4 py-3 text-sm outline-none">
-              <option>Any vehicle</option><option>Car</option><option>Bike</option><option>EV Scooter</option><option>Luxury</option>
+              <option>Any vehicle</option><option>Car</option><option>Bike</option><option>EV Scooter</option><option>Auto Rickshaw</option><option>Luxury SUV</option>
             </select>
             <select className="glass appearance-none rounded-xl px-4 py-3 text-sm outline-none">
-              <option>Any price</option><option>$0 — $30</option><option>$30 — $80</option><option>$80+</option>
+              <option>Any price</option><option>₹0 — ₹500</option><option>₹500 — ₹2,000</option><option>₹2,000+</option>
             </select>
             <button className="btn-neon justify-center"><FaSearch /> Search</button>
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
             <span className="flex items-center gap-1 text-muted-foreground"><FaFilter /> Filters:</span>
-            <Chip>Petrol</Chip><Chip>Diesel</Chip><Chip>Hybrid</Chip>
+            <Chip>Petrol</Chip><Chip>Diesel</Chip><Chip>CNG</Chip><Chip>Hybrid</Chip>
             <button
               onClick={() => setEvOnly(!evOnly)}
               className={`flex items-center gap-1 rounded-full border px-3 py-1.5 text-xs transition-all ${

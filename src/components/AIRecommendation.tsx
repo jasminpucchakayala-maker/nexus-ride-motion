@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { FaRobot, FaArrowRight } from "react-icons/fa";
 
 const recs = [
-  { name: "Tesla Model 3", reason: "Matches your $50/day budget", tag: "EV · 5 seats", price: 49 },
-  { name: "BMW i8 Roadster", reason: "Loved by users on your route", tag: "Luxury · 2 seats", price: 129 },
-  { name: "Royal Enfield 650", reason: "Great for solo weekend trips", tag: "Bike · Cruiser", price: 22 },
+  { name: "Tata Nexon EV", reason: "Matches your ₹2,500/day budget in Mumbai", tag: "EV · 5 seats", price: 1999 },
+  { name: "Mahindra Thar Roxx", reason: "Loved by users on Bengaluru–Mysuru route", tag: "SUV · 4 seats", price: 4499 },
+  { name: "Royal Enfield Classic 350", reason: "Great for solo weekend trips to Lonavala", tag: "Bike · Cruiser", price: 899 },
 ];
 
 export default function AIRecommendation() {
@@ -42,7 +42,7 @@ export default function AIRecommendation() {
               <p className="mt-1 text-xs text-muted-foreground">{r.tag}</p>
               <p className="mt-4 text-sm">{r.reason}</p>
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-lg font-bold text-gradient">${r.price}/day</span>
+                <span className="text-lg font-bold text-gradient">₹{r.price}/day</span>
                 <button className="btn-ghost !py-2 text-xs">Book <FaArrowRight /></button>
               </div>
             </motion.div>

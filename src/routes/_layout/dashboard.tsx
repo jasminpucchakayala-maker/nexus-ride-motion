@@ -39,7 +39,7 @@ function Dashboard() {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Stat icon={<FaDollarSign />} label="Revenue" value="$184,210" delta="+12.4%" />
+          <Stat icon={<FaDollarSign />} label="Revenue" value="₹1,84,21,000" delta="+12.4%" />
           <Stat icon={<FaCar />} label="Active Vehicles" value="3,482" delta="+3.1%" />
           <Stat icon={<FaUsers />} label="Riders" value="58,914" delta="+8.7%" />
           <Stat icon={<FaRoute />} label="Trips Today" value="3,892" delta="+5.6%" />
@@ -93,10 +93,10 @@ function Dashboard() {
             <h3 className="mb-4 font-semibold">Popular vehicles</h3>
             <div className="space-y-3">
               {[
-                { n: "Tesla Model 3", t: 1280 },
-                { n: "BMW i8 Roadster", t: 980 },
-                { n: "Royal Enfield 650", t: 740 },
-                { n: "Volt EV Scooter", t: 620 },
+                { n: "Tata Nexon EV Max", t: 1280 },
+                { n: "Mahindra Thar Roxx", t: 980 },
+                { n: "Royal Enfield Classic 350", t: 740 },
+                { n: "Ather 450X EV Scooter", t: 620 },
               ].map((v, i) => (
                 <div key={v.n} className="glass flex items-center justify-between rounded-xl p-3">
                   <div className="flex items-center gap-3">
@@ -112,11 +112,11 @@ function Dashboard() {
             <h3 className="mb-4 font-semibold">Recent activity</h3>
             <div className="space-y-3 text-sm">
               {[
-                "Aarav booked Tesla Model 3 · 2m ago",
-                "Sofía completed trip · 5m ago",
-                "Owner added BMW M4 · 11m ago",
-                "Liam topped up wallet · 18m ago",
-                "Maya rated 5★ · 24m ago",
+                "Aarav booked Tata Nexon EV Max · Mumbai · 2m ago",
+                "Priya completed trip · Bengaluru · 5m ago",
+                "Owner added Mahindra XUV700 · Delhi · 11m ago",
+                "Rohan topped up wallet via UPI · 18m ago",
+                "Maya rated 5★ · Hyderabad · 24m ago",
               ].map((a) => (
                 <div key={a} className="glass rounded-xl p-3">{a}</div>
               ))}

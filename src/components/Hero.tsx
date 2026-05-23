@@ -45,7 +45,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--neon)] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--neon)]" />
             </span>
-            <FaBolt className="text-[color:var(--neon)]" /> Now live in 24 cities
+            <FaBolt className="text-[color:var(--neon)]" /> Now live in 24 Indian cities
           </motion.div>
 
           <motion.h1
@@ -64,8 +64,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-muted-foreground"
           >
-            Voltride is the next-generation automobile sharing platform. Premium vehicles,
-            instant booking, real-time GPS, AI recommendations — all in one cinematic app.
+            Voltride is India's next-generation automobile sharing platform. From Mumbai to Bengaluru — premium vehicles, instant booking, real-time GPS, UPI payments and AI recommendations — all in one cinematic app.
           </motion.p>
 
           <motion.div

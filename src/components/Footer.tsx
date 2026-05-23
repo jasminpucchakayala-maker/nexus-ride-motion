@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Voltride Mobility. Drive the future.
+        © {new Date().getFullYear()} Voltride Mobility India Pvt. Ltd. · Made in Bengaluru 🇮🇳
       </div>
     </footer>
   );

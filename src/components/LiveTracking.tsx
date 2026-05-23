@@ -19,7 +19,7 @@ export default function LiveTracking() {
               See every ride <span className="text-gradient">in real time</span>
             </h2>
             <p className="mt-4 max-w-md text-muted-foreground">
-              Live vehicle positions, animated route lines and a nearby finder — all on a single beautiful map.
+              Live vehicle positions across Mumbai, Delhi, Bengaluru, Hyderabad and 20+ Indian cities — with animated route lines and a nearby finder on a single beautiful map.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Stat label="Live vehicles" value="12,450" />
@@ -69,10 +69,10 @@ export default function LiveTracking() {
             </svg>
             {/* pins */}
             {[
-              { x: "20%", y: "78%", c: "var(--neon)" },
-              { x: "55%", y: "55%", c: "var(--neon-2)" },
-              { x: "78%", y: "30%", c: "var(--neon)" },
-              { x: "40%", y: "20%", c: "var(--neon-2)" },
+              { x: "20%", y: "78%", c: "var(--neon)", label: "Mumbai" },
+              { x: "55%", y: "55%", c: "var(--neon-2)", label: "Bengaluru" },
+              { x: "78%", y: "30%", c: "var(--neon)", label: "Delhi NCR" },
+              { x: "40%", y: "20%", c: "var(--neon-2)", label: "Hyderabad" },
             ].map((p, i) => (
               <motion.div
                 key={i}
@@ -81,9 +81,10 @@ export default function LiveTracking() {
                 style={{ left: p.x, top: p.y, color: `oklch(var(--${p.c}))` }}
                 className="absolute -translate-x-1/2 -translate-y-1/2"
               >
-                <div className="relative">
+                <div className="relative flex flex-col items-center">
                   <div className="absolute inset-0 -z-10 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current opacity-30 blur-xl" />
                   <FaCar className="text-2xl text-[color:var(--neon)]" />
+                  <span className="mt-1 rounded-full bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-white/80 backdrop-blur">{p.label}</span>
                 </div>
               </motion.div>
             ))}
