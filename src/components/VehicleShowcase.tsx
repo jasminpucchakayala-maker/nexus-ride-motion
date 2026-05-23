@@ -62,7 +62,7 @@ export default function VehicleShowcase() {
                 >
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">{veh.category}</div>
                   <div className="mt-1 font-semibold">{veh.name}</div>
-                  <div className="mt-2 text-sm text-[color:var(--neon)]">${veh.price}/hr</div>
+                  <div className="mt-2 text-sm text-[color:var(--neon)]">₹{veh.price}/hr</div>
                 </button>
               ))}
             </div>
