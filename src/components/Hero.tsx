@@ -64,8 +64,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-muted-foreground"
           >
-            Voltride is the next-generation automobile sharing platform. Premium vehicles,
-            instant booking, real-time GPS, AI recommendations — all in one cinematic app.
+            Voltride is India's next-generation automobile sharing platform. From Mumbai to Bengaluru — premium vehicles, instant booking, real-time GPS, UPI payments and AI recommendations — all in one cinematic app.
           </motion.p>
 
           <motion.div
