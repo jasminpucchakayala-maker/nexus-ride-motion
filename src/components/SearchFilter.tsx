@@ -38,7 +38,7 @@ export default function SearchFilter() {
 
           <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
             <span className="flex items-center gap-1 text-muted-foreground"><FaFilter /> Filters:</span>
-            <Chip>Petrol</Chip><Chip>Diesel</Chip><Chip>Hybrid</Chip>
+            <Chip>Petrol</Chip><Chip>Diesel</Chip><Chip>CNG</Chip><Chip>Hybrid</Chip>
             <button
               onClick={() => setEvOnly(!evOnly)}
               className={`flex items-center gap-1 rounded-full border px-3 py-1.5 text-xs transition-all ${
