@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 const reviews = [
-  { name: "Aarav Mehta", role: "Frequent Traveller", avatar: "https://i.pravatar.cc/100?img=12", text: "Voltride changed how I move around the city. The 3D booking flow alone is worth it.", stars: 5 },
-  { name: "Sofía García", role: "Designer", avatar: "https://i.pravatar.cc/100?img=47", text: "Beautiful UI, fast bookings, premium cars. It feels like the future of mobility.", stars: 5 },
-  { name: "Liam Chen", role: "Founder", avatar: "https://i.pravatar.cc/100?img=33", text: "The AI recommendations actually nail what I want every single time. Insane.", stars: 5 },
-  { name: "Maya Patel", role: "Photographer", avatar: "https://i.pravatar.cc/100?img=5", text: "Finally a sharing app that respects design. The whole experience is cinematic.", stars: 5 },
+  { name: "Aarav Mehta", role: "Frequent Traveller · Mumbai", avatar: "https://i.pravatar.cc/100?img=12", text: "Voltride changed how I move around Bombay. The 3D booking flow alone is worth it.", stars: 5 },
+  { name: "Priya Sharma", role: "Designer · Bengaluru", avatar: "https://i.pravatar.cc/100?img=47", text: "Beautiful UI, fast UPI checkout, premium cars. It feels like the future of Indian mobility.", stars: 5 },
+  { name: "Rohan Iyer", role: "Founder · Hyderabad", avatar: "https://i.pravatar.cc/100?img=33", text: "The AI recommendations actually nail what I want every single weekend trip to Pondicherry.", stars: 5 },
+  { name: "Maya Patel", role: "Photographer · Delhi", avatar: "https://i.pravatar.cc/100?img=5", text: "Finally a sharing app that respects design. The whole experience is cinematic.", stars: 5 },
 ];
 
 export default function Testimonials() {
