@@ -45,7 +45,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--neon)] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--neon)]" />
             </span>
-            <FaBolt className="text-[color:var(--neon)]" /> Now live in 24 cities
+            <FaBolt className="text-[color:var(--neon)]" /> Now live in 24 Indian cities
           </motion.div>
 
           <motion.h1
