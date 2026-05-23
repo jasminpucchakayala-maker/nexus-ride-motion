@@ -111,14 +111,14 @@ function BookingPage() {
           {/* Summary */}
           <aside className="neon-border glass rounded-3xl p-6 h-fit sticky top-28">
             <div className="text-xs uppercase tracking-wider text-muted-foreground">Booking Summary</div>
-            <div className="mt-3 text-lg font-semibold">Tesla Model 3</div>
+            <div className="mt-3 text-lg font-semibold">Tata Nexon EV Max</div>
             <div className="mt-1 flex items-center gap-1 text-xs text-[color:var(--neon)]"><FaCheckCircle /> Live availability</div>
             <div className="mt-5 space-y-2 text-sm">
-              <Row label="Base fare" value="$49.00" />
-              <Row label="Insurance" value="$5.50" />
-              <Row label="Taxes" value="$4.20" />
+              <Row label="Base fare" value="₹1,999" />
+              <Row label="Insurance" value="₹249" />
+              <Row label="GST (18%)" value="₹405" />
               <div className="my-3 border-t border-white/10" />
-              <Row label={<b>Total</b>} value={<b className="text-gradient text-lg">$58.70</b>} />
+              <Row label={<b>Total</b>} value={<b className="text-gradient text-lg">₹2,653</b>} />
             </div>
           </aside>
         </div>
