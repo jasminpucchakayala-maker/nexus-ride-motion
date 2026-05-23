@@ -13,7 +13,7 @@ The platform allows users to explore, book, and manage premium vehicles with a m
 
 ## 📸 Website Preview
 
-![VOLTRIDE Preview](screenshot.png)
+![VOLTRIDE Preview](Screenshot.png.png)
 
 ---
 
