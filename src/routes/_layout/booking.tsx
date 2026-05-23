@@ -141,7 +141,7 @@ function BookingPage() {
               </div>
               <h3 className="mt-5 text-2xl font-bold">Booking confirmed!</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Your Tesla Model 3 is reserved. Driver details sent to your phone.
+                Your Tata Nexon EV Max is reserved. Driver details sent to your phone.
               </p>
               <button className="btn-neon mt-6 w-full justify-center" onClick={() => setConfirmed(false)}>Done</button>
             </motion.div>
