@@ -79,7 +79,7 @@ export default function VehicleShowcase() {
                 <h3 className="text-2xl font-bold">{v.name}</h3>
                 <p className="text-sm text-muted-foreground">{v.category}</p>
                 <div className="mt-5 grid grid-cols-3 gap-4">
-                  <Spec label="Price" value={`$${v.price}/hr`} />
+                  <Spec label="Price" value={`₹${v.price}/hr`} />
                   <Spec label="Range" value={v.range} />
                   <Spec label="Performance" value={v.speed} />
                 </div>
