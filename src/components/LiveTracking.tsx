@@ -19,7 +19,7 @@ export default function LiveTracking() {
               See every ride <span className="text-gradient">in real time</span>
             </h2>
             <p className="mt-4 max-w-md text-muted-foreground">
-              Live vehicle positions, animated route lines and a nearby finder — all on a single beautiful map.
+              Live vehicle positions across Mumbai, Delhi, Bengaluru, Hyderabad and 20+ Indian cities — with animated route lines and a nearby finder on a single beautiful map.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Stat label="Live vehicles" value="12,450" />
