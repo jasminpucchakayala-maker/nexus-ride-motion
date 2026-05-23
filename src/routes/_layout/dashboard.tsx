@@ -93,10 +93,10 @@ function Dashboard() {
             <h3 className="mb-4 font-semibold">Popular vehicles</h3>
             <div className="space-y-3">
               {[
-                { n: "Tesla Model 3", t: 1280 },
-                { n: "BMW i8 Roadster", t: 980 },
-                { n: "Royal Enfield 650", t: 740 },
-                { n: "Volt EV Scooter", t: 620 },
+                { n: "Tata Nexon EV Max", t: 1280 },
+                { n: "Mahindra Thar Roxx", t: 980 },
+                { n: "Royal Enfield Classic 350", t: 740 },
+                { n: "Ather 450X EV Scooter", t: 620 },
               ].map((v, i) => (
                 <div key={v.n} className="glass flex items-center justify-between rounded-xl p-3">
                   <div className="flex items-center gap-3">
