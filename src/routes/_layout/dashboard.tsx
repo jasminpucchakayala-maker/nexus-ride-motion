@@ -39,7 +39,7 @@ function Dashboard() {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <Stat icon={<FaDollarSign />} label="Revenue" value="$184,210" delta="+12.4%" />
+          <Stat icon={<FaDollarSign />} label="Revenue" value="₹1,84,21,000" delta="+12.4%" />
           <Stat icon={<FaCar />} label="Active Vehicles" value="3,482" delta="+3.1%" />
           <Stat icon={<FaUsers />} label="Riders" value="58,914" delta="+8.7%" />
           <Stat icon={<FaRoute />} label="Trips Today" value="3,892" delta="+5.6%" />
