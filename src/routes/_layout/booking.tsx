@@ -48,8 +48,8 @@ function BookingPage() {
                 <motion.div key="s1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                   <h3 className="text-xl font-bold">Trip details</h3>
                   <div className="mt-5 grid gap-4 md:grid-cols-2">
-                    <Field icon={<FaMapPin />} label="Pickup"><input className="input" placeholder="123 Main St" /></Field>
-                    <Field icon={<FaMapPin />} label="Drop-off"><input className="input" placeholder="Airport T2" /></Field>
+                    <Field icon={<FaMapPin />} label="Pickup"><input className="input" placeholder="Bandra West, Mumbai" /></Field>
+                    <Field icon={<FaMapPin />} label="Drop-off"><input className="input" placeholder="CSMI Airport T2" /></Field>
                     <Field icon={<FaCalendarAlt />} label="Pickup time"><input type="datetime-local" className="input" /></Field>
                     <Field icon={<FaCalendarAlt />} label="Return"><input type="datetime-local" className="input" /></Field>
                   </div>
