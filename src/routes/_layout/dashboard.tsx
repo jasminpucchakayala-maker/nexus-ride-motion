@@ -112,11 +112,11 @@ function Dashboard() {
             <h3 className="mb-4 font-semibold">Recent activity</h3>
             <div className="space-y-3 text-sm">
               {[
-                "Aarav booked Tesla Model 3 · 2m ago",
-                "Sofía completed trip · 5m ago",
-                "Owner added BMW M4 · 11m ago",
-                "Liam topped up wallet · 18m ago",
-                "Maya rated 5★ · 24m ago",
+                "Aarav booked Tata Nexon EV Max · Mumbai · 2m ago",
+                "Priya completed trip · Bengaluru · 5m ago",
+                "Owner added Mahindra XUV700 · Delhi · 11m ago",
+                "Rohan topped up wallet via UPI · 18m ago",
+                "Maya rated 5★ · Hyderabad · 24m ago",
               ].map((a) => (
                 <div key={a} className="glass rounded-xl p-3">{a}</div>
               ))}
